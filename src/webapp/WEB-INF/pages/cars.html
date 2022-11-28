@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars</title>
+</head>
+<body>
+
+<h1>Welcome to Cars</h1>
+
+<ul th:each="car : ${countCars}">
+    <li th:text="${car.getModel() + ', ' + car.getProducer()}">car</li>
+</ul>
+</body>
+</html>
